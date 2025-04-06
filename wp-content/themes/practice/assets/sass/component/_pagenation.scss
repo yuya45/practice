@@ -1,0 +1,29 @@
+@use "../global" as g;
+
+.c-pagination{
+    width: fit-content;
+    margin: g.rem(86) auto 0;
+    .nav-links{
+        display: flex;
+        align-items: center;
+        gap: g.rem(16);
+        // font-family: "Montserrat";
+        .current{
+            font-weight: 600;
+        }
+    }
+}
+// .prev{
+//     background:no-repeat url(../img/common/arrow_blue_left.svg);
+//     background-size: contain;
+//     width: g.rem(17);
+//     aspect-ratio: 17/10;
+//     margin-right: g.rem(24);
+// }
+// .next{
+//     background:no-repeat url(../img/common/arrow_blue.svg);
+//     background-size: contain;
+//     width: g.rem(17);
+//     aspect-ratio: 17/10;
+//     margin-left: g.rem(24);
+// }

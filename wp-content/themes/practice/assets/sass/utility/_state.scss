@@ -1,0 +1,63 @@
+@use "../global" as g;
+@use "../foundation/extend";
+
+.is-pcOnly {
+  @include g.mq(sm) {
+    display: none;
+  }
+}
+.is-spOnly {
+  display: none;
+
+  @include g.mq(sm) {
+    display: block;
+  }
+}
+.is-overPc {
+  @include g.mq(pc) {
+    display: none;
+  }
+}
+.is-underPc {
+  display: none;
+  @include g.mq(pc) {
+    display: block;
+  }
+}
+.is-overXxl {
+  @include g.mq(xxl) {
+    display: none;
+  }
+}
+.is-underXxl {
+  display: none;
+  @include g.mq(xxl) {
+    display: block;
+  }
+}
+.is-overXl {
+  @include g.mq(xl) {
+    display: none;
+  }
+}
+.is-underXl {
+  display: none;
+  @include g.mq(xl) {
+    display: block;
+  }
+}
+.is-overMd {
+  @include g.mq(md) {
+    display: none;
+  }
+}
+.is-underMd {
+  display: none;
+
+  @include g.mq(md) {
+    display: block;
+  }
+}
+.is-fixed {
+  overflow: hidden !important;
+}

@@ -1,0 +1,28 @@
+// pxを自動的にremに変換
+@function rem($px) {
+  @return ($px / 16) * 1rem;
+}
+
+/**
+@param $min は$min-view-port時のサイズ(px)
+@param $max は$max-view-port時のサイズ(px)
+*/
+
+@function myClamp($min, $max, $min-view-port: 375, $max-view-port: 1920) {
+  $valiable-part: calc(($max - $min) / ($max-view-port - $min-view-port));
+  $constant: calc(($max - $max-view-port * $valiable-part) / 16);
+  $min-rem: calc($min / 16 * 1rem);
+  $max-rem: calc($max / 16 * 1rem);
+  $variable-rem: calc($constant * 1rem);
+  $variable-vw: calc(100 * $valiable-part * 1vw);
+
+  @return clamp($min-rem, $variable-rem + $variable-vw, $max-rem);
+}
+
+
+// function 関数名(第一引数,第二引数){
+//     // 何かしらの処理
+//     return 返り値;
+// }
+
+// 関数名(引数,引数)

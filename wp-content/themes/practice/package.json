@@ -1,0 +1,10 @@
+{
+  "type": "module",
+  "scripts": {
+    "sharp:watch": "onchange \"assets/img/**/*.{png,jpg,jpeg,svg,gif}\" -- node sharp-watch.mjs {{changed}}"
+  },
+  "devDependencies": {
+    "onchange": "^7.1.0",
+    "sharp": "^0.33.4"
+  }
+}

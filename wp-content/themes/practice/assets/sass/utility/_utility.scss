@@ -1,0 +1,24 @@
+@use "../global" as g;
+@use "../foundation/extend";
+
+.u-flex {
+  display: flex;
+}
+.u-grid {
+  display: grid;
+}
+.u-uppercase {
+  text-transform: uppercase;
+}
+.u-capitalize {
+  text-transform: capitalize;
+}
+.u-textCenter {
+  text-align: center;
+}
+.u-bold {
+  font-weight: bold;
+}
+.u-justify-center.u-justify-center {
+  justify-content: center;
+}

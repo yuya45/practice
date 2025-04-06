@@ -1,0 +1,6 @@
+@use "../global" as g;
+@use "../foundation/extend";
+
+body:has(#wpadminbar) .l-header {
+    top: 2rem;
+}

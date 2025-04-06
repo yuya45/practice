@@ -1,0 +1,70 @@
+// ブレイクポイント
+$breakpoints: (
+  "ssm": "screen and (max-width: 480px)",
+  "sm": "screen and (max-width: 600px)",
+  "md": "screen and (max-width: 768px)",
+  "lg": "screen and (max-width: 991px)",
+  "xl": "screen and (max-width: 1024px)",
+  "xxl": "screen and (max-width: 1280px)",
+  "pc": "screen and (min-width: 1366px)",
+  "lpc": "screen and (min-width: 1480px)",
+  "xlpc": "screen and (max-width: 1600px)",
+  "over": "screen and (min-width: 1920px)",
+) !default;
+
+@mixin mq($breakpoint: sm) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+// Webフォントの読み込みを簡単にするmixin
+@mixin font-face(
+  $family,
+  $path,
+  $weight: normal,
+  $style: normal,
+  $exts: eot woff2 woff ttf svg
+) {
+  $src: null;
+
+  $extmods: (
+    eot: "?",
+    svg: "#" + str-replace($family, " ", "_"),
+  );
+
+  $formats: (
+    otf: "opentype",
+    ttf: "truetype",
+  );
+
+  @each $ext in $exts {
+    $extmod: if(
+      map-has-key($extmods, $ext),
+      $ext + map-get($extmods, $ext),
+      $ext
+    );
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append(
+      $src,
+      url(quote($path + "." + $extmod)) format(quote($format)),
+      comma
+    );
+  }
+
+  @font-face {
+    font-family: quote($family);
+    font-style: $style;
+    font-weight: $weight;
+    src: $src;
+  }
+}
+
+// タッチデバイスを考慮したhover関数
+@mixin hover {
+  @media (hover: hover) {
+    &:where(:-webkit-any-link, :enabled, summary):hover {
+      @content;
+    }
+  }
+}

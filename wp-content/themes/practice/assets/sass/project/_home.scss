@@ -1,0 +1,6 @@
+@use "../global" as g;
+@use "../foundation/extend";
+
+.p-home__kvTxt {
+  font-size: g.myClamp(14, 16);
+}

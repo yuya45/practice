@@ -1,0 +1,14 @@
+@use "../global" as g;
+@use "../foundation/extend";
+
+.post-navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: g.rem(0);
+}
+.toArchive{
+    width: fit-content;
+    max-width: 100%;
+    margin: g.rem(0) auto 0 ;
+}

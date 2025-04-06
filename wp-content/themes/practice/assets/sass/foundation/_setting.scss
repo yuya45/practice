@@ -1,0 +1,24 @@
+@use "../global" as g;
+
+// フォントの読み込みサンプル
+@include g.font-face(
+  "Noto Sans Jp",
+  "../fonts/NotoSansJP-Regular",
+  400,
+  normal,
+  ttf
+);
+@include g.font-face(
+  "Noto Sans Jp",
+  "../fonts/NotoSansJP-Medium",
+  500,
+  normal,
+  ttf
+);
+@include g.font-face(
+  "Noto Sans Jp",
+  "../fonts/NotoSansJP-Bold",
+  700,
+  normal,
+  ttf
+);
