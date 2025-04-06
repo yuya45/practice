@@ -1,0 +1,67 @@
+@charset "UTF-8";
+/**
+@param $min は$min-view-port時のサイズ(px)
+@param $max は$max-view-port時のサイズ(px)
+*/
+.p-scrollFade__grid, .p-scrollFade__grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .p-scrollFade__grid, .p-scrollFade__grid2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.p-scrollFade__grid__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+@media screen and (max-width: 768px) {
+  .p-scrollFade__grid__left {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+@media screen and (max-width: 768px) {
+  .p-scrollFade__grid__left {
+    height: auto;
+  }
+}
+
+.p-scrollFade__grid__left--inner {
+  margin: auto;
+}
+
+.p-scrollFade__grid__right {
+  position: relative;
+  height: 100vh;
+}
+
+.p-scrollFade__grid__right--img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+.p-scrollFade__grid__right--img:first-child {
+  opacity: 1;
+}
+
+.p-xxx {
+  height: 600px;
+}

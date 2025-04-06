@@ -4,3 +4,19 @@
 body:has(#wpadminbar) .l-header {
     top: 2rem;
 }
+
+.l-header{
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+}
+.l-header-nav__list{
+    display: flex;
+    align-items: center;
+    gap: g.rem(8);
+}
+.l-header-nav__link{
+    padding: g.rem(8);
+    background-color: gray;
+    display: inline-block;
+}

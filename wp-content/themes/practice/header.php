@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,5 +20,12 @@
 
 <body <?php body_class(); ?>>
     <!-- header -->
-    <header class="l-header p-header" id="header"></header>
+    <header class="l-header p-header" id="header">
+        <nav class="l-header-nav l-inner l-inner--1100">
+            <ul class="l-header-nav__list">
+                <li class="l-header-nav__item"><a href="<?php echo esc_url(home_url('/')); ?>" class="l-header-nav__link">ホーム</a></li>
+                <li class="l-header-nav__item"><a href="<?php echo esc_url(home_url('/scrollFade')); ?>" class="l-header-nav__link">スクロールで画像フェード</a></li>
+            </ul>
+        </nav>
+    </header>
     <!-- /header -->
