@@ -14,7 +14,7 @@
   switchViewport();
 })();
 
-// 初期化
+// スクロールで画像フェード
 ['upper', 'lower'].forEach((type) => {
   const triggerEl = document.querySelector(`.p-scrollFade__grid__right.${type}`);
   const images = document.querySelectorAll(`.p-scrollFade__grid__right--img.${type}`);
