@@ -30,7 +30,6 @@
     markers: true,
     onUpdate: (self) => {
       const progress = self.progress;
-      console.log(progress)
       images[0].style.opacity = progress > 0.5 ? 0 : 1;
       images[1].style.opacity = progress > 0.5 ? 1 : 0;
     }
