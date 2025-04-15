@@ -1,0 +1,115 @@
+@charset "UTF-8";
+/**
+@param $min は$min-view-port時のサイズ(px)
+@param $max は$max-view-port時のサイズ(px)
+*/
+.p-home__productList {
+  margin-top: 1.5rem;
+}
+
+.p-home__productListItem {
+  border-bottom: solid 1px #9A9A9A;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: relative;
+}
+@media screen and (max-width: 1024px) {
+  .p-home__productListItem {
+    border-bottom: solid 1px #030303;
+  }
+}
+@media (hover: hover) {
+  .p-home__productListItem:where(:-webkit-any-link, :enabled, summary):hover {
+    border-bottom: solid 1px #030303;
+  }
+}
+
+.p-home__productListLink {
+  padding-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #929292;
+}
+@media screen and (max-width: 1024px) {
+  .p-home__productListLink {
+    padding: 0 0 0.5625rem;
+    color: #030303;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media (hover: hover) {
+  .p-home__productListLink:where(:-webkit-any-link, :enabled, summary):hover {
+    opacity: 1;
+    color: #030303;
+  }
+}
+
+.p-home__productListItem:nth-child(n+2) .p-home__productListLink {
+  padding-top: 2.25rem;
+}
+@media screen and (max-width: 1024px) {
+  .p-home__productListItem:nth-child(n+2) .p-home__productListLink {
+    padding: 1rem 0 0.5625rem;
+  }
+}
+
+.p-home__productListNum {
+  font-family: "Montserrat";
+  font-size: 0.875rem;
+  letter-spacing: 0;
+  line-height: 1.2857142857;
+}
+
+.p-home__productListTxt {
+  font-weight: 700;
+  font-size: 1.75rem;
+  letter-spacing: 0.05em;
+  line-height: 1.6666666667;
+}
+@media screen and (max-width: 600px) {
+  .p-home__productListTxt {
+    font-size: 1.125rem;
+  }
+}
+
+.p-home__productBtnWrap {
+  margin-top: 3.5rem;
+  margin-left: auto;
+  margin-right: 2.8125rem;
+}
+@media screen and (max-width: 1024px) {
+  .p-home__productBtnWrap {
+    margin: 3rem auto 0;
+  }
+}
+
+.p-home__productTxtImgWrapXl {
+  display: contents;
+}
+@media screen and (max-width: 1024px) {
+  .p-home__productTxtImgWrapXl {
+    margin-top: 0.3125rem;
+    display: block;
+    gap: 1.4375rem;
+  }
+}
+
+.p-home__productImgXl {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  .p-home__productImgXl {
+    display: block;
+    width: 5.4375rem;
+    max-width: 100%;
+  }
+}

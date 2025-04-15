@@ -1,0 +1,112 @@
+@charset "UTF-8";
+/**
+@param $min は$min-view-port時のサイズ(px)
+@param $max は$max-view-port時のサイズ(px)
+*/
+.p-btnCircle__wrap {
+  width: 18.75rem;
+  max-width: 100%;
+}
+
+.p-btnCircle:hover .bg-line {
+  fill: #4f95da;
+}
+.p-btnCircle:hover .hl-line {
+  stroke-dashoffset: -280;
+  fill: #1a1721;
+}
+.p-btnCircle:hover p {
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.p-btnCircle:hover .appear {
+  opacity: 1;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.frame {
+  position: absolute;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0.5rem 1rem 1rem rgba(0, 0, 0, 0.6);
+          box-shadow: 0.5rem 1rem 1rem rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  background: #201c29;
+  color: rgba(187, 37, 221, 0.7);
+  font-family: "Josefin Slab", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.button p {
+  position: absolute;
+  font-size: 1.8rem;
+  top: 40%;
+  left: 44%;
+}
+
+.button {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.button .appear {
+  opacity: 0;
+  left: 36.5%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.button .bg-line {
+  stroke: #bb25dd;
+  -webkit-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+}
+
+.button .hl-line {
+  stroke: #ad2fed;
+  fill: #201c29;
+  stroke-dasharray: 40 480;
+  stroke-dashoffset: 40;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+.button {
+  cursor: pointer;
+}
+.button:hover .bg-line {
+  fill: #4f95da;
+}
+.button:hover .hl-line {
+  stroke-dashoffset: -280;
+  fill: #1a1721;
+}
+.button:hover p {
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.button:hover .appear {
+  opacity: 1;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
