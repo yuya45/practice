@@ -13,11 +13,24 @@
   addEventListener("resize", switchViewport, false);
   switchViewport();
 })();
+// ホバー表示切替（共通）
+jQuery(function () {
+  const triggerItems = jQuery(".js-hoverChangeTriggerList li");
+  const cardItems = jQuery(".js-hoverChangeCardList li");
+  const linkSelector = ".p-home__productListLink";
 
+  triggerItems.hover(function () {
+    const index = jQuery(this).index();
+
+    cardItems.removeClass("current").eq(index).addClass("current");
+    triggerItems.find(linkSelector).removeClass("current");
+    triggerItems.eq(index).find(linkSelector).addClass("current");
+  });
+});
 // スクロールで画像フェード
 ['upper', 'lower'].forEach((type) => {
-  const triggerEl = document.querySelector(`.p-scrollFade__grid__right.${type}`);
-  const images = document.querySelectorAll(`.p-scrollFade__grid__right--img.${type}`);
+  const triggerEl = document.querySelector(`.p-scrollFade__grid__right.jQuery{type}`);
+  const images = document.querySelectorAll(`.p-scrollFade__grid__right--img.jQuery{type}`);
 
   if (!triggerEl || images.length < 2) return;
 

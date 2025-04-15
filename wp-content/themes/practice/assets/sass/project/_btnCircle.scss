@@ -1,0 +1,91 @@
+@use "../global" as g;
+@use "../foundation/extend";
+
+.p-btnCircle__wrap {
+  width: g.rem(300);
+  max-width: 100%;
+}
+
+.p-btnCircle{
+  &:hover .bg-line {
+    fill: #4f95da;
+  }
+  &:hover .hl-line {
+    stroke-dashoffset: -280;
+    fill: #1a1721;
+  }
+  &:hover p {
+    opacity: 0;
+    transition: 0.5s;
+  }
+  &:hover .appear {
+    opacity: 1;
+    transition-delay: 0.3s;
+  }
+}
+
+.frame {
+  position: absolute;
+  transform: scale(1.3);
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 0.5rem 1rem 1rem rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  background: #201c29;
+  color: fade-out(#bb25dd, 0.3);
+  font-family: "Josefin Slab", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button p {
+  position: absolute;
+  font-size: 1.8rem;
+  top: 40%;
+  left: 44%;
+}
+.button {
+  transition: 0.5s;
+}
+.button .appear {
+  opacity: 0;
+  left: 36.5%;
+  transition: 0.5s;
+}
+.button .bg-line {
+  stroke: #bb25dd;
+  transition: all 0.8s ease-in-out;
+}
+
+.button .hl-line {
+  stroke: #ad2fed;
+  fill: #201c29;
+  stroke-dasharray: 40 480;
+  stroke-dashoffset: 40;
+  transition: all 0.6s ease-in-out;
+}
+.button {
+  cursor: pointer;
+  &:hover .bg-line {
+    fill: #4f95da;
+  }
+  &:hover .hl-line {
+    stroke-dashoffset: -280;
+    fill: #1a1721;
+  }
+  &:hover p {
+    opacity: 0;
+    transition: 0.5s;
+  }
+  &:hover .appear {
+    opacity: 1;
+    transition-delay: 0.3s;
+  }
+}

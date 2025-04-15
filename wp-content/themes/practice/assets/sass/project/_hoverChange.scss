@@ -1,0 +1,237 @@
+@use "../global" as g;
+@use "../foundation/extend";
+
+// product
+.p-home__product {
+  padding-top: g.rem(120);
+  padding-bottom: g.rem(125);
+  margin: 0 calc(50% - 50vw) 0;
+  width: 100vw;
+  background: url(../img/home/bg_product.jpg) no-repeat;
+  background-size: cover;
+  overflow: hidden;
+
+  @include g.mq(xl) {
+      padding: g.rem(70) 0;
+  }
+
+  @include g.mq(sm) {
+      padding: g.rem(88) 0;
+  }
+}
+
+.p-home__productWrap {
+  display: flex;
+  margin-left: auto;
+  display: flex;
+  gap: g.rem(71);
+  width: calc(100vw - (100vw - 1100px) / 2);
+
+  @include g.mq(xxl) {
+      width: 100%;
+      max-width: 90%;
+      justify-content: center;
+  }
+
+  @include g.mq(md) {
+      margin: 0 auto;
+  }
+}
+
+.p-home__productIconHeading {
+  @include g.mq(xl) {
+      justify-content: center;
+  }
+}
+
+.p-home_productCardList {
+  display: grid;
+  background-color: #fff;
+}
+
+.p-home__productLeft {
+  position: relative;
+  z-index: 1;
+
+  @include g.mq(xl) {
+      display: none;
+  }
+}
+
+.p-home_productCard {
+  width: g.rem(550);
+  max-width: 100%;
+  background-color: #FFFFFF;
+  visibility: hidden;
+  opacity: 0;
+  grid-area: 1/1;
+  transition: 0.5s;
+  box-shadow: 0px 2px 32px #00000029;
+}
+
+.p-home_productCard.current {
+  visibility: visible;
+  opacity: 1;
+}
+
+.p-home__productCardTxtWrap {
+  padding: g.rem(20);
+}
+
+.p-home__productCardMainTxt {
+  font-size: g.rem(18);
+  letter-spacing: 0.1em;
+  line-height: calc(26/18);
+  font-weight: 700;
+}
+
+.p-home__productCardSubTxt {
+  margin-top: g.rem(16);
+  font-size: g.rem(16);
+  letter-spacing: 0.1em;
+  line-height: calc(96/48);
+}
+
+.p-home__productRight {
+  position: relative;
+  padding-top: g.rem(100);
+  width: g.rem(458);
+  max-width: 100%;
+  z-index: 0;
+
+  @include g.mq(xl) {
+      padding-top: g.rem(62);
+  }
+
+  @include g.mq(md) {
+      width: fit-content;
+  }
+
+  &::before {
+      z-index: -1;
+      content: "";
+      width: g.rem(966);
+      height: g.rem(966);
+      position: absolute;
+      top: calc(50% + g.rem(120));
+      left: 50%;
+      background-color: #fff;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      border: #fff solid 1px;
+      border-radius: 50%;
+      box-shadow: 0px 2px 32px #00000029;
+
+      @include g.mq(xl) {
+          top: 50%;
+          width: g.rem(850);
+          height: g.rem(850);
+      }
+
+      @include g.mq(sm) {
+          top: calc(50% + g.rem(24));
+          width: g.rem(617);
+          height: g.rem(617);
+      }
+  }
+}
+
+.p-home__productList {
+  margin-top: g.rem(24);
+}
+
+.p-home__productListItem {
+  border-bottom: solid 1px #9A9A9A;
+  transition: 0.5s;
+  position: relative;
+
+  @include g.mq(xl) {
+      border-bottom: solid 1px #030303;
+  }
+
+  @include g.hover() {
+      border-bottom: solid 1px #030303;
+  }
+}
+
+.p-home__productListLink {
+  padding-bottom: g.rem(16);
+  display: flex;
+  gap: g.rem(24);
+  transition: 0.5s;
+  color: #929292;
+
+  @include g.mq(xl) {
+      padding: 0 0 g.rem(9);
+      color: #030303;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  @include g.hover() {
+      opacity: 1;
+      color: #030303;
+  }
+  &.current{
+    opacity: 1;
+    color: #030303;
+  }
+}
+
+.p-home__productListItem:nth-child(n+ 2) .p-home__productListLink {
+  padding-top: g.rem(36);
+
+  @include g.mq(xl) {
+      padding: g.rem(16) 0 g.rem(9);
+  }
+}
+
+.p-home__productListNum {
+  font-family: "Montserrat";
+  font-size: g.rem(14);
+  letter-spacing: 0;
+  line-height: calc(18/14);
+}
+
+.p-home__productListTxt {
+  font-weight: 700;
+  font-size: g.rem(28);
+  letter-spacing: 0.05em;
+  line-height: calc(40/24);
+
+  @include g.mq(sm) {
+      font-size: g.rem(18);
+  }
+}
+
+.p-home__productBtnWrap {
+  margin-top: g.rem(56);
+  margin-left: auto;
+  margin-right: g.rem(45);
+
+  @include g.mq(xl) {
+      margin: g.rem(48) auto 0;
+  }
+}
+
+.p-home__productTxtImgWrapXl {
+  display: contents;
+
+  @include g.mq(xl) {
+      margin-top: g.rem(5);
+      display: block;
+      gap: g.rem(23);
+  }
+
+}
+
+.p-home__productImgXl {
+  display: none;
+
+  @include g.mq(xl) {
+      display: block;
+      width: g.rem(87);
+      max-width: 100%;
+  }
+}

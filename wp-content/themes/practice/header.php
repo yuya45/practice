@@ -25,6 +25,7 @@
             <ul class="l-header-nav__list">
                 <li class="l-header-nav__item"><a href="<?php echo esc_url(home_url('/')); ?>" class="l-header-nav__link">ホーム</a></li>
                 <li class="l-header-nav__item"><a href="<?php echo esc_url(home_url('/scrollFade')); ?>" class="l-header-nav__link">スクロールで画像フェード</a></li>
+                <li class="l-header-nav__item"><a href="<?php echo esc_url(home_url('/btnCircle')); ?>" class="l-header-nav__link">ボタンくるくる</a></li>
             </ul>
         </nav>
     </header>

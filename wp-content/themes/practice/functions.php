@@ -36,7 +36,7 @@ function my_script_init()
     wp_enqueue_script(
         'jquery',
         get_template_directory_uri() . '/assets/libs/jquery-3.7.1.min.js',
-        ['jquery'],
+        [],
         '3.7.1',
         true
     );
