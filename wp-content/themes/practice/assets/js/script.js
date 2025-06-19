@@ -28,9 +28,13 @@ jQuery(function () {
   });
 });
 // スクロールで画像フェード
-['upper', 'lower'].forEach((type) => {
-  const triggerEl = document.querySelector(`.p-scrollFade__grid__right.jQuery{type}`);
-  const images = document.querySelectorAll(`.p-scrollFade__grid__right--img.jQuery{type}`);
+["upper", "lower"].forEach((type) => {
+  const triggerEl = document.querySelector(
+    `.p-scrollFade__grid__right.${type}`
+  );
+  const images = document.querySelectorAll(
+    `.p-scrollFade__grid__right--img.${type}`
+  );
 
   if (!triggerEl || images.length < 2) return;
 
@@ -46,6 +50,6 @@ jQuery(function () {
       // console.log(progress)
       images[0].style.opacity = progress > 0.5 ? 0 : 1;
       images[1].style.opacity = progress > 0.5 ? 1 : 0;
-    }
+    },
   });
 });
